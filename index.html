@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Form - Task 1</title>
+<link rel="stylesheet" href="style/style.css">
+<script type="text/javascript" src='http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.3.min.js'></script>
+</head>
+<body>
+<div id="div-form">
+<h2>Register Yourself to our Website</h2>
+<hr style="border:1px solid black;">
+<form>
+<label class="head_lab"><strong>Personal Details:-</strong></label>
+<br><br>
+<div class="row">
+<div class="colu">First Name</div>
+<div class="colu">Middle Name</div>
+<div class="colu">Last Name</div>
+</div>
+<div class="row">
+<div class="colu"><input type="text" name="first_name" id="first_name" required></div>
+<div class="colu"><input type="text" name="middle_name" id="middle_name"></div>
+<div class="colu"><input type="text" name="last_name" id="last_name" required></div>
+<br>
+<div class="row">
+<div class="colu">Father Name</div>
+<div class="colu">Mother Name</div>
+<div class="colu">Gender</div>
+</div>
+<div class="row">
+<div class="colu"><input type="text" name="father_name" required></div>
+<div class="colu"><input type="text" name="mother_name" required></div>
+<div class="colu">
+<input type="radio" id="gender" name="gender" value="male" required onclick="if(this.checked){funmale()}" />
+  <label for="male">Male</label>
+  <input type="radio" id="gender" name="gender" value="female" required onclick="if(this.checked){funfemale()}" />
+  <label for="female">Female</label>
+  <input type="radio" id="gender" name="gender" value="other" required onclick="if(this.checked){funother()}" />
+  <label for="other">Other</label>
+</div>
+</div>
+<br>
+<div class="row">
+<div class="colu">Father occupation:</div>
+</div>
+<div class="row">
+<div class="coluop">
+<input name="father_occ" type="radio" value="Government_employee" /> Government Employee 
+<input name="father_occ" type="radio" value="Private_employee" /> Private Employee
+<input name="father_occ" type="radio" value="Business" /> Business
+<input name="father_occ" type="radio" value="farmer" /> Farmer
+</div>
+</div>
+</div><p id="p1"></p>
+<br>
+<hr>
+<br>
+<label class="head_lab"><strong>Address :-</strong></label><br>
+<br>
+<div class="row">
+<div class="coluu">Flat Number/ Plot Number:</div>
+<div class="coluu">Locality/ Colony:</div>
+<div class="coluu">City:</div>
+</div>
+<div class="row">
+<div class="coluu"><input type="text" name="add1" required></div>
+<div class="coluu"><input type="text" name="add2" required></div>
+<div class="coluu"><input type="text" name="city" required></div>
+</div>
+<br>
+<div class="row">
+<div class="coluu">District:</div>
+<div class="coluu">State:</div>
+<div class="coluu">Country:</div>
+<div class="coluu">Pincode:</div>
+</div>
+<div class="row">
+<div class="coluu"><input type="text" name="district" required></div>
+<div class="coluu"><input type="text" name="state" required></div>
+<div class="coluu"><input type="text" name="country" required></div>
+<div class="coluu"><input type="text" name="pincode" required></div>
+</div>
+<br>
+<hr>
+<br>
+<label class="head_lab"><strong>College Details:-</strong></label><br>
+<br>
+<div class="row">
+<div class="coluu">Enrollment Number:</div>
+<div class="coluu"><label>Year</label></div>
+<div class="coluu"><label>Stream</label></div>
+<div class="coluu"><label>Course</label></div>
+</div>
+<div class="row">
+<div class="coluu"><input type="text" id="enroll_num" name="enroll_num" required><input type="button" value="Check" onclick="myEncheck()"></div>
+<div class="coluu"><label id="year"></label></div>
+<div class="coluu"><label id="stream"></label></div>
+<div class="coluu"><label id="course"></label></div>
+</div>
+<br>
+<div class="row">
+<div class="coluu">Hostel Status: <input name="stat_hos" type="radio" value="yes" required /> Yes <input name="stat_hos" type="radio" value="no" required /> No </div>
+</div>
+<br>
+<hr>
+<br>
+<label class="head_lab"><strong>Class 10th:-</strong></label><br><br>
+<div class="row">
+<div class="colu">Board Name</div>
+<div class="colu">Subjects</div>
+<div class="colu">Percentage</div>
+</div>
+<div class="row">
+<div class="colu"><input type="text" name="board_10_name" required></div>
+<div class="colu"><input type="text" name="board_10_sub" required></div>
+<div class="colu"><input type="text" name="board_10_per" required></div>
+</div>
+<br>
+<hr>
+<br>
+<label class="head_lab"><strong>Class 12th:-</strong></label><br><br>
+<div class="row">
+<div class="colu">Board Name</div>
+<div class="colu">Subjects</div>
+<div class="colu">Percentage</div>
+</div>
+<div class="row">
+<div class="colu"><input type="text" name="board_12_name" required></div>
+<div class="colu"><input type="text" name="board_12_sub" required></div>
+<div class="colu"><input type="text" name="board_12_per" required></div>
+</div>
+<br>
+<hr>
+<br>
+<label class="head_lab"><strong>Graduation:-</strong></label><br><br>
+<div class="row">
+<div class="colu">Title</div>
+<div class="colu">University</div>
+<div class="colu">Percentage</div>
+</div>
+<div class="row">
+<div class="colu"><input type="text" name="grad_name" required></div>
+<div class="colu"><input type="text" name="uni_name" required></div>
+<div class="colu"><input type="text" name="uni_per" required></div>
+</div>
+<br>
+<br>
+<input type="submit" style="margin-left:45%;" />
+
+
+<!--
+<label>Name:-</label><br>
+<label id="name-label">First Name:-</label>
+<label id="name-label">Middle Name:-</label>
+<label id="name-label">Last Name:-</label><br><input id="name-label" type="text"><input id="input-box" type="text"><input id="input-box" type="text"><br><br>
+<label id="name-label">Father Name:-</label><input type="text" id="input-box"><br><br>
+<label id="name-label">Mother Name:-</label><input type="text" id="input-box"><br><br> -->
+</form>
+</div>
+
+
+
+<script>
+function funmale() {
+	var ans="Mr.";
+	var x = document.getElementById("first_name").value;
+	ans=ans+" "+x.charAt(0).toUpperCase() + x.slice(1);
+	x = document.getElementById("middle_name").value;
+	ans=ans+" "+x.charAt(0).toUpperCase() + x.slice(1);
+	x = document.getElementById("last_name").value;
+	ans=ans+" "+x.charAt(0).toUpperCase() + x.slice(1);
+  document.getElementById("p1").innerHTML = ans;
+}
+function funfemale() {
+  var ans="Ms.";
+	var x = document.getElementById("first_name").value;
+	ans=ans+" "+x.charAt(0).toUpperCase() + x.slice(1);
+	x = document.getElementById("middle_name").value;
+	ans=ans+" "+x.charAt(0).toUpperCase() + x.slice(1);
+	x = document.getElementById("last_name").value;
+	ans=ans+" "+x.charAt(0).toUpperCase() + x.slice(1);
+  document.getElementById("p1").innerHTML = ans;
+}
+function funother() {
+  document.getElementById("p1").innerHTML = "";
+}
+
+function myEncheck(){
+var tdate = new Date();
+var tYear=tdate.getFullYear();
+var tmonth=tdate.getMonth();
+var x = document.getElementById("enroll_num").value;
+var enYear=x.charAt(1)+x.charAt(2)+x.charAt(3)+x.charAt(4);
+//parseInt(enYear);
+enYear=parseInt(enYear);
+if(tmonth >=5){
+	var yearr=parseInt(tYear)-parseInt(enYear)+1;
+}
+else{
+	var yearr=parseInt(tYear)-parseInt(enYear);
+}
+if(x.charAt(7)=='2'){
+	var stt='B.Tech';
+}
+if(x.charAt(7) == '4'){
+	var stt='BCA';
+}
+if(stt == 'BCA'){
+var couu='BCA';}
+if(x.charAt(10) == '1'){
+	var couu='CSE';
+}
+if(x.charAt(10) == '2'){
+	var couu='ECE';
+}
+if(x.charAt(10) == '4'){
+	var couu='CE';
+}
+if(x.charAt(10) == '5'){
+	var couu='EE';
+}
+if(x.charAt(10) == '6'){
+	var couu='ME';
+}
+
+
+document.getElementById("year").innerHTML = yearr;
+document.getElementById("stream").innerHTML = stt;
+document.getElementById("course").innerHTML = couu;
+}
+
+</script>
+
+
+
+
+</body>
+</html>
